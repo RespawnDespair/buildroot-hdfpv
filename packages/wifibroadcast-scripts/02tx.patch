@@ -1,0 +1,17 @@
+--- a/tx.sh	2015-12-31 17:57:44.000000000 +0100
++++ b/tx.sh	2016-03-08 13:33:28.849606266 +0100
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ # tx script
+ 
+ #if we detect no camera, we fall asleep
+@@ -13,7 +13,7 @@
+ #wait a bit. this helps automatic starting
+ sleep 2
+ 
+-source /home/pi/wifibroadcast_fpv_scripts/settings.sh
++source /root/wifibroadcast_fpv_scripts/settings.sh
+ 
+ 
+ function prepare_nic {

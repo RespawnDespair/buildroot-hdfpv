@@ -1,0 +1,10 @@
+--- a/settings.sh	2016-03-08 13:29:04.749614123 +0100
++++ b/settings.sh	2016-03-08 13:34:36.185604263 +0100
+@@ -20,6 +20,6 @@
+ FECS=4
+ PACKET_LENGTH=1024
+ PORT=0
+-WBC_PATH="/home/pi/wifibroadcast"
++WBC_PATH="/root/wifibroadcast"
+ ##################################
+ 

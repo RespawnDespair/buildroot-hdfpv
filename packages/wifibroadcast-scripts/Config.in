@@ -1,0 +1,6 @@
+config BR2_PACKAGE_WIFIBROADCASTSCRIPTS
+	bool "wifibroadcastscripts"
+	help
+	  This will install start scripts for Befi's wifibroadcast
+
+	  https://bitbucket.org/befi/wifibroadcast_fpv_scripts

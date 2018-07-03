@@ -1,0 +1,30 @@
+config BR2_PACKAGE_WIFIBROADCAST
+	bool "wifibroadcast"
+	depends on BR2_TOOLCHAIN_USES_GLIBC
+	depends on BR2_PACKAGE_LIBPCAP # libpcap
+	depends on BR2_PACKAGE_IW # iw
+	depends on BR2_PACKAGE_WIRELESS_TOOLS # iwconfig and so on
+	depends on BR2_PACKAGE_WIRELESS_REGDB # really needed?
+	depends on BR2_PACKAGE_RPI_USERLAND # raspivid + hello_video
+	help
+	  This will install Befi's wifibroadcast
+
+	  https://bitbucket.org/befi/wifibroadcast
+
+comment "wifibroadcast needs a glibc toolchain"
+	depends on !BR2_TOOLCHAIN_USES_GLIBC
+
+comment "wbc needs libpcap"
+	depends on !BR2_PACKAGE_LIBPCAP
+
+comment "wbc needs iw"
+	depends on !BR2_PACKAGE_IW
+
+comment "wbc needs wireless-tools"
+	depends on !BR2_PACKAGE_WIRELESS_TOOLS
+
+comment "wbc needs wireless-regdb"
+	depends on !BR2_PACKAGE_WIRELESS_REGDB
+
+comment "wbc needs rpi-userland"
+	depends on !BR2_PACKAGE_RPI_USERLAND

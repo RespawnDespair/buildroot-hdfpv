@@ -1,0 +1,22 @@
+--- a/init.d/wbctxd	2015-12-31 17:57:44.000000000 +0100
++++ b/init.d/S99wbctxd	2016-03-08 13:37:23.081599299 +0100
+@@ -13,7 +13,7 @@
+ case "$1" in
+     start)
+         # START
+-        /home/pi/wifibroadcast_fpv_scripts/tx.sh > /dev/null &
++        /root/wifibroadcast_fpv_scripts/tx.sh > /dev/null &
+         ;;
+     stop)
+         # STOP
+@@ -21,8 +21,8 @@
+         ;;
+     restart)
+         # RESTART
+-				killall tx.sh
+-        /home/pi/wifibroadcast_fpv_scripts/tx.sh > /dev/null &
++	killall tx.sh
++        /root/wifibroadcast_fpv_scripts/tx.sh > /dev/null &
+         ;;
+ esac
+  

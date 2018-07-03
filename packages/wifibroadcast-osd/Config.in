@@ -1,0 +1,6 @@
+config BR2_PACKAGE_WIFIBROADCASTOSD
+	bool "wifibroadcastosd"
+	help
+	  This will install Befi's wifibroadcast osd
+
+	  https://bitbucket.org/befi/frsky_omx_osd

@@ -1,0 +1,22 @@
+--- a/init.d/wbcrxd	2016-03-08 13:36:31.061600846 +0100
++++ b/init.d/S99wbcrxd	2016-03-08 13:37:03.017599895 +0100
+@@ -13,7 +13,7 @@
+ case "$1" in
+     start)
+         # START
+-        /home/pi/wifibroadcast_fpv_scripts/rx.sh > /dev/null &
++        /root/wifibroadcast_fpv_scripts/rx.sh > /dev/null &
+         ;;
+     stop)
+         # STOP
+@@ -21,8 +21,8 @@
+         ;;
+     restart)
+         # RESTART
+-				killall hello_video.bin
+-        /home/pi/wifibroadcast_fpv_scripts/rx.sh > /dev/null &
++	killall hello_video.bin
++        /root/wifibroadcast_fpv_scripts/rx.sh > /dev/null &
+         ;;
+ esac
+  

@@ -1,0 +1,20 @@
+--- a/rx.sh	2015-12-31 17:57:44.000000000 +0100
++++ b/rx.sh	2016-03-08 13:33:33.265606135 +0100
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ # rx script
+ 
+ 
+@@ -15,9 +15,9 @@
+ 
+ 
+ 
+-source /home/pi/wifibroadcast_fpv_scripts/settings.sh
++source /root/wifibroadcast_fpv_scripts/settings.sh
+ 
+-DISPLAY_PROGRAM="/opt/vc/src/hello_pi/hello_video/hello_video.bin" 
++DISPLAY_PROGRAM="hello_video.bin" 
+ 
+ 
+ 
