@@ -5,3 +5,8 @@
 config BR2SM_PROJECT_NAME
 	string
 	option env="PROJECT_NAME"
+
+# External packages
+source "$BR2_EXTERNAL_BUILDROOT_SUBMODULE_PATH/packages/wifibroadcast/Config.in"
+source "$BR2_EXTERNAL_BUILDROOT_SUBMODULE_PATH/packages/wifibroadcast-osd/Config.in"
+source "$BR2_EXTERNAL_BUILDROOT_SUBMODULE_PATH/packages/wifibroadcast-scripts/Config.in"
