@@ -1,6 +1,13 @@
 config BR2_PACKAGE_WIFIBROADCASTOSD
 	bool "wifibroadcastosd"
+	depends on BR2_TOOLCHAIN_USES_GLIBC
+	select BR2_PACKAGE_LIBPCAP # libpcap
+	select BR2_PACKAGE_OPENGL
+	select BR2_PACKAGE_HAS_LIBOPENVG
 	help
 	  This will install Befi's wifibroadcast osd
 
 	  https://bitbucket.org/befi/frsky_omx_osd
+
+comment "wifibroadcastosd needs a glibc toolchain"
+	depends on !BR2_TOOLCHAIN_USES_GLIBC

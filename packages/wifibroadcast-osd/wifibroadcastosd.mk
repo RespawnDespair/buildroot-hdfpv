@@ -1,26 +1,22 @@
 ################################################################################
 #
-# wifibroadcast
+# wifibroadcastosd
 #
 ################################################################################
-WIFIBROADCAST_VERSION = default
-WIFIBROADCAST_SOURCE = wifibroadcast-$(WIFIBROADCAST_VERSION).tar.gz
-WIFIBROADCAST_SITE = https://bitbucket.org/befi/wifibroadcast
-WIFIBROADCAST_SITE_METHOD = hg
-WIFIBROADCAST_INSTALL_STAGING = YES
+WIFIBROADCASTOSD_VERSION = origin/master
+WIFIBROADCASTOSD_SITE = https://github.com/RespawnDespair/wifibroadcast-osd.git
+WIFIBROADCASTOSD_SITE_METHOD = git
+WIFIBROADCASTOSD_INSTALL_STAGING = YES
 
-WIFIBROADCAST_DEPENDENCIES = libpcap
+WIFIBROADCASTOSD_DEPENDENCIES = libpcap
 
-define WIFIBROADCAST_BUILD_CMDS
-     $(MAKE) CC=$(TARGET_CC) LD=$(TARGET_LD) -C $(@D) rx tx rx_status_test
+define WIFIBROADCASTOSD_BUILD_CMDS
+     $(MAKE) CC=$(TARGET_CC) LD=$(TARGET_LD) -C $(@D) all
 endef
 
-define WIFIBROADCAST_INSTALL_TARGET_CMDS
-     mkdir -p $(TARGET_DIR)/root/wifibroadcast/
-     cp -r $(@D)/rx $(TARGET_DIR)/root/wifibroadcast/
-     cp -r $(@D)/tx $(TARGET_DIR)/root/wifibroadcast/
-     cp -r $(@D)/rx_status_test $(TARGET_DIR)/root/wifibroadcast/
-     cp -r $(@D)/patches/ $(TARGET_DIR)/root/wifibroadcast/
+define WIFIBROADCASTOSD_INSTALL_TARGET_CMDS
+     mkdir -p $(TARGET_DIR)/root/wifibroadcast-osd/
+     cp -r $(@D)/osd $(TARGET_DIR)/root/wifibroadcast-osd/
 endef
 
 $(eval $(generic-package))
